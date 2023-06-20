@@ -76,7 +76,7 @@ function desenharCartela(nome_jogador, cartela) {
         var tr = document.createElement('tr');
         for(var j = 0; j < 5; j++) {
             var td = document.createElement('td');
-            if(i === 2 && j === 2) {
+            if(i == 2 && j == 2) {
                 td.innerText = "X";
                 tr.appendChild(td);
             } else {
@@ -96,4 +96,30 @@ function limpar_cartela(){
   
     var div = document.getElementById('cartelas');
     div.innerHTML = '';
+}
+
+
+
+
+function gerarNumeroAleatorio() {
+    return Math.floor(Math.random() * 71) + 1;
+}
+
+function sortear_numero(cartela) {
+    var numerosSorteados = [];
+  
+    while (numerosSorteados.length < cartela) {
+      var numeroSorteado = gerarNumeroAleatorio();
+  
+      if (!numerosSorteados.includes(numeroSorteado)) {
+        numerosSorteados.push(numeroSorteado);
+  
+        if (numerosCartela.includes(numeroSorteado)) {
+          var indiceNumero = numerosCartela.indexOf(numeroSorteado);
+          numerosCartela.splice(indiceNumero, 1);
+        }
+      }
+    }
+  
+    console.log("Cartela concluída!");
   }
