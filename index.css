@@ -56,15 +56,18 @@ main div.area_cartelas #cartelas{
     justify-content: space-around;
 }
 
-div.area_cartelas .cartelas{
+#cartelas div{
+    width: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
-div.area_cartelas .cartelas h4{
+#cartelas h4{
     margin: 0%;
 }
 

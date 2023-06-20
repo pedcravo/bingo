@@ -38,7 +38,10 @@ function criar_tabela(){
 
 
 function desenharCartela(nome_jogador, cartela) {
-    var div = document.getElementById('cartelas');
+    var cartela_1 = document.getElementById('cartelas');
+
+    var div = document.createElement('div')
+    cartela_1.appendChild(div);
 
     var nomeJogadorElement = document.createElement('h4');
     nomeJogadorElement.innerText = nome_jogador;
@@ -89,5 +92,8 @@ function desenharCartela(nome_jogador, cartela) {
 }
 
 function limpar_cartela(){
-    jogadores = []
-}
+    jogadores = [];
+  
+    var div = document.getElementById('cartelas');
+    div.innerHTML = '';
+  }
