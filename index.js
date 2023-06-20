@@ -82,6 +82,8 @@ function desenharCartela(nome_jogador, cartela) {
             } else {
                 td.innerText = cartela[j][i];
                 tr.appendChild(td);
+                td.id = "bola " + i;
+                td.className = "bola";
             }
         }
         tabela.appendChild(tr);
