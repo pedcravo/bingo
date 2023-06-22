@@ -103,11 +103,6 @@ function limpar_cartela(){
     div.innerHTML = '';
 }
 
-
-function sortear(){
-    function sortear_numero()
-}
-
 function sortear_numero() {
     var NumeroSorteado = document.createElement("div");
     NumeroSorteado.id = "numero_sorteado";
