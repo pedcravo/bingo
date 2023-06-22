@@ -1,5 +1,6 @@
 var jogadores = []
 
+// Função para criar numeros aleatórios
 function gerarNumerosAleatorios(quantidade, min, max){
 
     if(quantidade > (max - min)){
@@ -21,6 +22,7 @@ function gerarNumerosAleatorios(quantidade, min, max){
 
 }
 
+// Função para criar a cartela do jogador utilizando as funções de criar tabela com o nome do jogador e de gerar numeros aleatórios
 function criar_tabela(){
     var nome_jogador = prompt('Digite o nome do jogador');
 
@@ -36,7 +38,7 @@ function criar_tabela(){
     console.log(jogadores)
 }
 
-
+// Função para criar a tabela com o nome do jogador
 function desenharCartela(nome_jogador, cartela) {
     var cartela_1 = document.getElementById('cartelas');
 
@@ -93,6 +95,7 @@ function desenharCartela(nome_jogador, cartela) {
     div.appendChild(tabela);
 }
 
+// Função para limpar as cartelas
 function limpar_cartela(){
     jogadores = [];
   
@@ -101,27 +104,18 @@ function limpar_cartela(){
 }
 
 
-
-
-function gerarNumeroAleatorio() {
-    return Math.floor(Math.random() * 71) + 1;
+function sortear(){
+    function sortear_numero()
 }
 
-function sortear_numero(cartela) {
-    var numerosSorteados = [];
-  
-    while (numerosSorteados.length < cartela) {
-      var numeroSorteado = gerarNumeroAleatorio();
-  
-      if (!numerosSorteados.includes(numeroSorteado)) {
-        numerosSorteados.push(numeroSorteado);
-  
-        if (numerosCartela.includes(numeroSorteado)) {
-          var indiceNumero = numerosCartela.indexOf(numeroSorteado);
-          numerosCartela.splice(indiceNumero, 1);
-        }
-      }
-    }
-  
-    console.log("Cartela concluída!");
-  }
+function sortear_numero() {
+    var NumeroSorteado = document.createElement("div");
+    NumeroSorteado.id = "numero_sorteado";
+      
+    var Sorteio = document.getElementsByClassName("sorteio");
+    Sorteio.appendChild(NumeroSorteado);
+      
+    var numeroElement = document.createElement("p");
+    numeroElement.id = "numero";
+    NumeroSorteado.appendChild(numeroElement);
+}
